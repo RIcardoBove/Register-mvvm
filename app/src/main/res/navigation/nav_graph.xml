@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerFragment">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.formsmvvm.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragments"
+            app:destination="@id/loginFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragments"
+        android:name="com.example.formsmvvm.fragments.LoginFragments"
+        android:label="fragment_login_fragments"
+        tools:layout="@layout/fragment_login_fragments" >
+        <action
+            android:id="@+id/action_loginFragments_to_userDateilsFragments"
+            app:destination="@id/userDateilsFragments" />
+        <action
+            android:id="@+id/action_loginFragments_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDateilsFragments"
+        android:name="com.example.formsmvvm.fragments.UserDateilsFragments"
+        android:label="fragment_user_dateils_fragments"
+        tools:layout="@layout/fragment_user_dateils_fragments" >
+        <action
+            android:id="@+id/action_userDateilsFragments_to_loginFragments"
+            app:destination="@id/loginFragments" />
+    </fragment>
+</navigation>
